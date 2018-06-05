@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.jh.smartrefresh"
+        minSdkVersion 18
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        renderscriptSupportModeEnabled true    // Enable RS support
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+    implementation 'com.github.czy1121:loadinglayout:1.0.1'
+    compile 'com.android.support:design:27.1.1'
+    compile 'com.github.mmin18:realtimeblurview:1.0.6'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar'
+    // 炫酷进度条框架
+    compile 'com.wang.avi:library:2.1.3'
+    compile project(path: ':refresh-layout')
+    compile project(path: ':refresh-header')
+    compile project(path: ':refresh-footer')
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    compile 'com.youth.banner:banner:1.4.9'//最新版本
+    compile 'com.google.code.gson:gson:2.8.0'
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+    compile 'jp.wasabeef:recyclerview-animators:2.2.6'
+    // gif框架
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.3'
+}
