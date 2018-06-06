@@ -3,15 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.scwang.refreshlayout.fragment.example.PureScrollExampleFragment">
+    android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar style="@style/AppTheme.Toolbar"
         android:id="@+id/toolbar"
         app:navigationIcon="?attr/homeAsUpIndicator"
         app:title="@string/app_name"/>
 
-    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+    <com.example.jh.refresh_layout.SmartRefreshLayout
         android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,6 +22,6 @@
             android:background="@android:color/white"
             android:overScrollMode="never"
             tools:listitem="@android:layout/simple_list_item_2"/>
-    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </com.example.jh.refresh_layout.SmartRefreshLayout>
 
 </LinearLayout>

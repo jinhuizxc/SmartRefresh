@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.scwang.refreshlayout.activity.style.ClassicsStyleActivity"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar style="@style/AppTheme.Toolbar"
@@ -12,13 +11,13 @@
         app:navigationIcon="?attr/homeAsUpIndicator"
         app:title="@string/title_activity_style_classics"/>
 
-    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+    <com.example.jh.refresh_layout.SmartRefreshLayout
         android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:srlEnableLoadMore="true"
         app:srlEnableAutoLoadMore="false">
-        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+        <com.example.jh.refresh_layout.header.ClassicsHeader
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:srlFinishDuration="500"
@@ -38,9 +37,9 @@
             android:background="@android:color/white"
             android:overScrollMode="never"
             tools:listitem="@android:layout/simple_list_item_2"/>
-        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+        <com.example.jh.refresh_layout.footer.ClassicsFooter
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </com.example.jh.refresh_layout.SmartRefreshLayout>
 
 </LinearLayout>
